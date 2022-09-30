@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.241" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/drawable/ic_circleblue.xml" value="0.241" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/drawable/ic_circlered.xml" value="0.241" />
         <entry key="..\:/android/KotUcheniy2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
-        <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main.xml" value="0.20521590423257802" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/drawable/ic_lock.xml" value="0.241" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/drawable/ic_question.xml" value="0.241" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main2.xml" value="0.264" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main_activity3_test.xml" value="0.2" />
       </map>
     </option>
   </component>
