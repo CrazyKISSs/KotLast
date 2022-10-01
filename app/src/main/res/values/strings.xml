@@ -2,4 +2,6 @@
     <string name="app_name">KotUcheniy2</string>
     <string name="main_button_start">ИГРАТЬ</string>
     <string name="choice_level">ВЫБЕРИ УРОВЕНЬ:</string>
+    <string name="question">Выбери правильный ответ:</string>
+    <string name="next">Дальше-></string>
 </resources>
