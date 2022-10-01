@@ -91,7 +91,7 @@
         android:id="@+id/button"
         android:layout_width="250sp"
         android:layout_height="100sp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/test_quesrion_image"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
