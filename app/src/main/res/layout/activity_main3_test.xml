@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activiti_test"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_for_test"
@@ -31,7 +32,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/money" />
+        app:srcCompat="@drawable/money"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -93,7 +95,7 @@
         android:layout_height="100sp"
         android:layout_marginTop="15dp"
         android:background="@drawable/test_quesrion_image"
-        android:text="Button"
+        android:text="Button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -104,7 +106,7 @@
         android:layout_height="140sp"
         android:layout_marginTop="45dp"
         android:background="@drawable/button_choise_of_option_image"
-        android:text="Button"
+        android:text="Button1"
         app:cornerRadius="200sp"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +118,7 @@
         android:layout_height="140sp"
         android:layout_marginTop="45dp"
         android:background="@drawable/button_choise_of_option_image"
-        android:text="Button"
+        android:text="Button2"
         app:cornerRadius="200sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button2"

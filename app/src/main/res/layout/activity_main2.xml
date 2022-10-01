@@ -71,7 +71,9 @@
                 android:layout_width="85sp"
                 android:layout_height="85sp"
                 android:backgroundTint="@android:color/transparent"
+                android:clickable="true"
                 android:contentDescription="1"
+                android:contextClickable="true"
                 android:foreground="@drawable/question"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/circle_blue" />
