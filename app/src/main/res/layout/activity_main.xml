@@ -34,15 +34,4 @@
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="367dp" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="151dp"
-        android:layout_height="80dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="15sp"
-        android:layout_marginEnd="133dp"
-        android:text="третья страница" />
 </RelativeLayout>

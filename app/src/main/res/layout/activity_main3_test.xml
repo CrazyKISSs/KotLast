@@ -91,22 +91,27 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Widget.Material3.BottomNavigationView"
         android:layout_width="250sp"
         android:layout_height="100sp"
         android:layout_marginTop="15dp"
         android:background="@drawable/test_quesrion_image"
+        android:backgroundTint="@null"
         android:text="Button3"
+        android:textColor="#151515"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.Material3.BottomNavigationView"
         android:layout_width="140sp"
         android:layout_height="140sp"
         android:layout_marginTop="45dp"
         android:background="@drawable/button_choise_of_option_image"
         android:text="Button1"
+        android:textColor="#222020"
         app:cornerRadius="200sp"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,11 +119,13 @@
 
     <Button
         android:id="@+id/button3"
+        style="@style/Widget.Material3.BottomNavigationView"
         android:layout_width="140sp"
         android:layout_height="140sp"
         android:layout_marginTop="45dp"
         android:background="@drawable/button_choise_of_option_image"
         android:text="Button2"
+        android:textColor="#0C0C0C"
         app:cornerRadius="200sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button2"

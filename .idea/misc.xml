@@ -11,7 +11,10 @@
         <entry key="..\:/android/KotUcheniy2/app/src/main/res/drawable/ic_question.xml" value="0.241" />
         <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main2.xml" value="0.264" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main2_grid.xml" value="0.264" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main3_test.xml" value="0.264" />
         <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/activity_main_activity3_test.xml" value="0.264" />
+        <entry key="..\:/android/KotUcheniy2/app/src/main/res/layout/grid_item.xml" value="0.2" />
       </map>
     </option>
   </component>
