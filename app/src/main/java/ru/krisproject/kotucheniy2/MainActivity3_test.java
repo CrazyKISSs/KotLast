@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity3_test extends AppCompatActivity {
 
     private ImageButton back_from_test;
+    public static TextView level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,9 @@ public class MainActivity3_test extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        level = findViewById(R.id.level);
+
     }
 
 

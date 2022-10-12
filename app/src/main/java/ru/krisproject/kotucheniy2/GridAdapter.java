@@ -45,13 +45,16 @@ public class GridAdapter extends BaseAdapter {
         }
 
         if (convertView == null) {
-            
+
             convertView = inflater.inflate(R.layout.grid_item, null);
         }
 
         ImageView imageView = convertView.findViewById(R.id.grid_image);
         TextView textView = convertView.findViewById((R.id.item_name));
 
-        return null;
+        imageView.setImageResource(image[position]);
+        textView.setText(level_name[position]);
+
+        return convertView;
     }
 }

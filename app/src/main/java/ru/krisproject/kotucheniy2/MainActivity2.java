@@ -1,26 +1,62 @@
 package ru.krisproject.kotucheniy2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import ru.krisproject.kotucheniy2.databinding.ActivityMain2Binding;
+
 public class MainActivity2 extends AppCompatActivity {
 
+    public static int[] image = {R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question,
+            R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question,
+            R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question,
+            R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question};
+    ActivityMain2Binding binding;
     ImageButton level_1;
+    String[] level_name = {"Уровень 1", "Уровень 2", "Уровень 3", "Уровень 4", "Уровень 5", "Уровень 6", "Уровень 7",
+            "Уровень 8", "Уровень 9", "Уровень 10", "Уровень 11", "Уровень 12", "Уровень 13", "Уровень 14", "Уровень 15",
+            "Уровень 16", "Уровень 17", "Уровень 18", "Уровень 19", "Уровень 20"};
+    private ImageButton back_from_level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        binding = ActivityMain2Binding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-//        level_1 = findViewById(R.id.level_1);
-//        level_1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity2.this, MainActivity3_test.class);
-//                startActivity(intent);
-//            }
-//        });
+        back_from_level = findViewById(R.id.back_from_level);
+        back_from_level.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        GridAdapter gridAdapter = new GridAdapter(MainActivity2.this, level_name, image);
+        binding.gridView.setAdapter(gridAdapter);
+
+        binding.gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(MainActivity2.this, MainActivity3_test.class);
+                startActivity(intent);
+                Quiz quiz = new Quiz(level_name[position]);
+
+                MainActivity3_test.level.setText(quiz.name);
+
+            }
+        });
+
     }
 }
