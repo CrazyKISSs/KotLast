@@ -27,7 +27,6 @@ public class MainActivity3_test extends AppCompatActivity {
             }
         });
 
-        level = findViewById(R.id.level);
 
     }
 
