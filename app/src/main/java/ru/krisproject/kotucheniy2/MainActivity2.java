@@ -26,8 +26,10 @@ public class MainActivity2 extends AppCompatActivity {
 
     ActivityMain2Binding binding;
 
-    String[] level_name = {"Уровень \n1", "Уровень \n2", "Уровень \n3", "Уровень \n4", "Уровень \n5", "Уровень \n6", "Уровень \n7",
-            "Уровень \n8", "Уровень \n9", "Уровень 10", "Уровень 11", "Уровень 12", "Уровень 13", "Уровень 14", "Уровень 15",
+    public static String choose_level_name;
+
+    String[] level_name = {"Уровень 1", "Уровень 2", "Уровень 3", "Уровень 4", "Уровень 5", "Уровень 6", "Уровень 7",
+            "Уровень 8", "Уровень 9", "Уровень 10", "Уровень 11", "Уровень 12", "Уровень 13", "Уровень 14", "Уровень 15",
             "Уровень 16", "Уровень 17", "Уровень 18", "Уровень 19", "Уровень 20", "Уровень 21", "Уровень 22", "Уровень 23", "Уровень 24", "Уровень 25",
             "Уровень 26", "Уровень 27", "Уровень 28", "Уровень 29", "Уровень 30", "Уровень 31", "Уровень 32"};
 
@@ -59,10 +61,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity2.this, MainActivity3_test.class);
                 startActivity(intent);
-                Quiz quiz = new Quiz(level_name[position]);
 
-                MainActivity3_test.level = findViewById(R.id.level);
-                MainActivity3_test.level.setText(quiz.name);
+                choose_level_name = level_name[position];
+
 
             }
         });

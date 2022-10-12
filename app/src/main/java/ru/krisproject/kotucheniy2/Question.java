@@ -10,6 +10,12 @@ public class Question {
     int wrong_answer;
     String text_of_question;
 
+    public static int[] image_choose_answer = {R.drawable.choice_answer_1, R.drawable.choise_answer_2, R.drawable.choise_answer_3
+            , R.drawable.choise_answer_4, R.drawable.choise_answer_5, R.drawable.choise_answer_6, R.drawable.choise_answer_7
+            , R.drawable.choise_answer_8, R.drawable.choise_answer_9, R.drawable.choise_answer_10, R.drawable.choise_answer_11
+            , R.drawable.choise_answer_12, R.drawable.choise_answer_13, R.drawable.choise_answer_14, R.drawable.choise_answer_15, R.drawable.choise_answer_16};
+
+
     Random r = new Random();
 
     public Question() {
@@ -27,7 +33,7 @@ public class Question {
             this.first_arg = r.nextInt(101);
             this.second_arg = r.nextInt(101 - this.first_arg);
             this.correct_answer = this.first_arg + this.second_arg;
-            this.text_of_question = "" + this.first_arg + " + " + this.second_arg;
+            this.text_of_question = "" + this.first_arg + " + " + this.second_arg + " = ?";
             this.wrong_answer = r.nextInt(101);
             while (this.wrong_answer == this.correct_answer) {
                 this.wrong_answer = r.nextInt(101);
@@ -39,7 +45,7 @@ public class Question {
             this.first_arg = Math.max(temp1, temp2);
             this.second_arg = Math.min(temp1, temp2);
             this.correct_answer = this.first_arg - this.second_arg;
-            this.text_of_question = "" + this.first_arg + " - " + this.second_arg;
+            this.text_of_question = "" + this.first_arg + " - " + this.second_arg + " = ?";
             this.wrong_answer = r.nextInt(101);
             while (this.wrong_answer == this.correct_answer) {
                 this.wrong_answer = r.nextInt(101);
