@@ -49,20 +49,22 @@ public class MainActivity3_test extends AppCompatActivity {
         level.setText(quiz.name);
 
 
+
         for (int i = 0; i < 10; i++) {
             textView5.setText((i + 1) + "/10");
             button4.setVisibility(View.INVISIBLE);
             button.setText(quiz.questions[i].text_of_question);
             textView7.setText("Правильных ответов - " + quiz.count_correct_answers);
-            textView24.setText("Неправильных ответов - " + quiz.count_correct_answers);
+            textView24.setText("Неправильных ответов - " + quiz.count_wrong_answer);
             button2.setClickable(true);
             button2.setBackground(getDrawable(R.drawable.button_choise_of_option_image));
             button3.setClickable(true);
             button3.setBackground(getDrawable(R.drawable.button_choise_of_option_image));
             int choise_answer_random = r.nextInt(Question.image_choose_answer.length);
+            int wrong_answer_random = r.nextInt(Question.image_wrong_answer.length);
+            int correct_answer_random = r.nextInt(Question.image_correct_answer.length);
             imageView6.setImageResource(Question.image_choose_answer[choise_answer_random]);
 
-            //(getDrawable(r.nextInt(Question.image_choose_answer.length)));
 
             int temp_correct_question = r.nextInt(2);
             switch (temp_correct_question) {
@@ -91,11 +93,46 @@ public class MainActivity3_test extends AppCompatActivity {
                     if (button2_correct) {
                         quiz.count_correct_answers++;
                         button2.setBackground(getDrawable(R.drawable.button_choise_of_option_image_green));
+                        imageView6.setImageResource(Question.image_correct_answer[correct_answer_random]);
 
                     } else {
                         quiz.count_wrong_answer++;
                         button2.setBackground(getDrawable(R.drawable.button_choise_of_option_image_red));
+                        imageView6.setImageResource(Question.image_wrong_answer[wrong_answer_random]);
                     }
+
+                    textView7.setText("Правильных ответов - " + quiz.count_correct_answers);
+                    textView24.setText("Неправильных ответов - " + quiz.count_wrong_answer);
+                }
+            });
+
+            button3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    button2.setClickable(false);
+                    button3.setClickable(false);
+                    button4.setVisibility(View.VISIBLE);
+
+                    if (button3_correct) {
+                        quiz.count_correct_answers++;
+                        button3.setBackground(getDrawable(R.drawable.button_choise_of_option_image_green));
+                        imageView6.setImageResource(Question.image_correct_answer[correct_answer_random]);
+
+                    } else {
+                        quiz.count_wrong_answer++;
+                        button3.setBackground(getDrawable(R.drawable.button_choise_of_option_image_red));
+                        imageView6.setImageResource(Question.image_wrong_answer[wrong_answer_random]);
+                    }
+
+                    textView7.setText("Правильных ответов - " + quiz.count_correct_answers);
+                    textView24.setText("Неправильных ответов - " + quiz.count_wrong_answer);
+                }
+            });
+
+            button4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
 
                 }
