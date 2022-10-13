@@ -17,6 +17,8 @@ public class MainActivity4 extends AppCompatActivity {
     static TextView last_window_text;
     static Button button_next;
     static Random random = new Random();
+    static int index_level;
+    static boolean index_level_great_new_image;
 
     static void startLastWindow() {
 
@@ -49,6 +51,7 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопросов! \nУРА! Ты получаешь " +
                         "коллекционный значёк! ПОЗДРАВЛЯЮ! Так держать!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
+                index_level_great_new_image = true;
 
         }
         Quiz.count_correct_answers = 0;
@@ -64,6 +67,11 @@ public class MainActivity4 extends AppCompatActivity {
         last_window_text = findViewById(R.id.last_window_text);
         button_next = findViewById(R.id.button_next);
         startLastWindow();
+
+        if (index_level_great_new_image) {
+            MainActivity2.image[index_level] = MainActivity2.collect_image_for_levels[index_level];
+            index_level_great_new_image = false;
+        }
 
         button_next.setOnClickListener(new View.OnClickListener() {
             @Override
