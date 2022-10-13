@@ -28,7 +28,7 @@ public class MainActivity3_test extends AppCompatActivity {
         start_last_window.setVisibility(View.INVISIBLE);
         button.setText(quiz.questions[n].text_of_question);
         textView7.setText("Правильных ответов - " + Quiz.count_correct_answers);
-        textView24.setText("Неправильных ответов - " + quiz.count_wrong_answer);
+        textView24.setText("Неправильных ответов - " + Quiz.count_wrong_answer);
 
 
         int choise_answer_random = r.nextInt(Question.image_choose_answer.length);
@@ -96,13 +96,13 @@ public class MainActivity3_test extends AppCompatActivity {
                     imageView6.setImageResource(Question.image_correct_answer[correct_answer_random]);
 
                 } else {
-                    quiz.count_wrong_answer++;
+                    Quiz.count_wrong_answer++;
                     button2.setBackground(getDrawable(R.drawable.button_choise_of_option_image_red));
                     imageView6.setImageResource(Question.image_wrong_answer[wrong_answer_random]);
                 }
 
                 textView7.setText("Правильных ответов - " + Quiz.count_correct_answers);
-                textView24.setText("Неправильных ответов - " + quiz.count_wrong_answer);
+                textView24.setText("Неправильных ответов - " + Quiz.count_wrong_answer);
 
             }
         });
@@ -130,13 +130,13 @@ public class MainActivity3_test extends AppCompatActivity {
                     imageView6.setImageResource(Question.image_correct_answer[correct_answer_random]);
 
                 } else {
-                    quiz.count_wrong_answer++;
+                    Quiz.count_wrong_answer++;
                     button3.setBackground(getDrawable(R.drawable.button_choise_of_option_image_red));
                     imageView6.setImageResource(Question.image_wrong_answer[wrong_answer_random]);
                 }
 
                 textView7.setText("Правильных ответов - " + Quiz.count_correct_answers);
-                textView24.setText("Неправильных ответов - " + quiz.count_wrong_answer);
+                textView24.setText("Неправильных ответов - " + Quiz.count_wrong_answer);
 
             }
         });
@@ -171,6 +171,9 @@ public class MainActivity3_test extends AppCompatActivity {
         back_from_test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Quiz.count_correct_answers = 0;
+                Quiz.count_wrong_answer = 0;
+                Question.question_count = 0;
                 Intent intent = new Intent(MainActivity3_test.this, MainActivity2.class);
                 startActivity(intent);
             }

@@ -28,14 +28,14 @@ public class MainActivity4 extends AppCompatActivity {
         switch (Quiz.count_correct_answers) {
             case 1:
                 last_window_text.setText("Ты ответил(а) правильно на 1 вопрос. \nТебе нужно хорошо потренироваться," +
-                        "чтобы получить значёк!");
+                        "чтобы получить значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_wrong_answer]);
                 break;
             case 2:
             case 3:
             case 4:
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопроса. \nПотренируйся" +
-                        "ещё немного, чтобы получить значёк!");
+                        "ещё немного, чтобы получить значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_wrong_answer]);
                 break;
             case 5:
@@ -43,13 +43,13 @@ public class MainActivity4 extends AppCompatActivity {
             case 7:
             case 8:
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопросов.\n" +
-                        "Ещё немного тренировок, и ты получишь значёк!");
+                        "Ещё немного тренировок, и ты получишь значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
                 break;
             case 9:
             case 10:
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопросов! \nУРА! Ты получаешь " +
-                        "коллекционный значёк! ПОЗДРАВЛЯЮ! Так держать!");
+                        "коллекционный значок! ПОЗДРАВЛЯЮ! Так держать!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
                 index_level_great_new_image = true;
 
