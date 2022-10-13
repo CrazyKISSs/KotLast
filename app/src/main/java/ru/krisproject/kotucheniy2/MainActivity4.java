@@ -51,6 +51,7 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
 
         }
+        Quiz.count_correct_answers = 0;
 
     }
 
