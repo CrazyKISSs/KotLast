@@ -14,6 +14,9 @@
         android:theme="@style/Theme.KotUcheniy2"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity4"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity3_test"
             android:exported="false" />
         <activity

@@ -24,6 +24,9 @@ public class MainActivity2 extends AppCompatActivity {
             , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
             , R.drawable.level_image_question, R.drawable.level_image_question};
 
+    public static int[] collect_image_for_levels = {};
+
+
     ActivityMain2Binding binding;
 
     public static String choose_level_name;

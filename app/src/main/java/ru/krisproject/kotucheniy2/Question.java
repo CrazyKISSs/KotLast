@@ -9,6 +9,7 @@ public class Question {
     int correct_answer;
     int wrong_answer;
     String text_of_question;
+    public static int question_count = 0;
 
     public static int[] image_choose_answer = {R.drawable.choice_answer_1, R.drawable.choise_answer_2, R.drawable.choise_answer_3
             , R.drawable.choise_answer_4, R.drawable.choise_answer_5, R.drawable.choise_answer_6, R.drawable.choise_answer_7

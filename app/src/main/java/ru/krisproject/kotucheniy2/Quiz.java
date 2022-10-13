@@ -4,7 +4,7 @@ public class Quiz {
 
     String name;
     Question[] questions = new Question[10];
-    int count_correct_answers = 0;
+    static int count_correct_answers = 0;
     int count_wrong_answer = 0;
 
     public Quiz(String name) {
