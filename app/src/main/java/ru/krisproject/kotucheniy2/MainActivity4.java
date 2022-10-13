@@ -1,6 +1,8 @@
 package ru.krisproject.kotucheniy2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,7 +46,7 @@ public class MainActivity4 extends AppCompatActivity {
                 break;
             case 9:
             case 10:
-                last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопросов! \nУРА! Ты получаешь" +
+                last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопросов! \nУРА! Ты получаешь " +
                         "коллекционный значёк! ПОЗДРАВЛЯЮ! Так держать!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
 
@@ -61,6 +63,14 @@ public class MainActivity4 extends AppCompatActivity {
         last_window_text = findViewById(R.id.last_window_text);
         button_next = findViewById(R.id.button_next);
         startLastWindow();
+
+        button_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity4.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
