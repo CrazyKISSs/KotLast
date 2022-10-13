@@ -14,7 +14,10 @@ public class Question {
     public static int[] image_choose_answer = {R.drawable.choice_answer_1, R.drawable.choise_answer_2, R.drawable.choise_answer_3
             , R.drawable.choise_answer_4, R.drawable.choise_answer_5, R.drawable.choise_answer_6, R.drawable.choise_answer_7
             , R.drawable.choise_answer_8, R.drawable.choise_answer_9, R.drawable.choise_answer_10, R.drawable.choise_answer_11
-            , R.drawable.choise_answer_12, R.drawable.choise_answer_13, R.drawable.choise_answer_14, R.drawable.choise_answer_15, R.drawable.choise_answer_16};
+            , R.drawable.choise_answer_12, R.drawable.choise_answer_13, R.drawable.choise_answer_14, R.drawable.choise_answer_15,
+            R.drawable.choise_answer_16, R.drawable.choise_answer_17, R.drawable.choise_answer_18, R.drawable.choise_answer_19
+            , R.drawable.choise_answer_20, R.drawable.choise_answer_21, R.drawable.choise_answer_22
+            , R.drawable.choise_answer_23, R.drawable.choise_answer_24, R.drawable.choise_answer_25};
 
     public static int[] image_wrong_answer = {R.drawable.wrong_answer_1, R.drawable.wrong_answer_2, R.drawable.wrong_answer_3
             , R.drawable.wrong_answer_4, R.drawable.wrong_answer_5, R.drawable.choise_answer_6, R.drawable.wrong_answer_7
@@ -23,14 +26,27 @@ public class Question {
             , R.drawable.wrong_answer_16, R.drawable.wrong_answer_17, R.drawable.wrong_answer_18, R.drawable.wrong_answer_19
             , R.drawable.wrong_answer_20, R.drawable.wrong_answer_21, R.drawable.wrong_answer_22, R.drawable.wrong_answer_23
             , R.drawable.wrong_answer_24, R.drawable.wrong_answer_25, R.drawable.wrong_answer_26, R.drawable.wrong_answer_27
-            , R.drawable.wrong_answer_28, R.drawable.wrong_answer_29, R.drawable.wrong_answer_30, R.drawable.wrong_answer_31};
+            , R.drawable.wrong_answer_28, R.drawable.wrong_answer_29, R.drawable.wrong_answer_30, R.drawable.wrong_answer_31
+            , R.drawable.wrong_answer_32, R.drawable.wrong_answer_33, R.drawable.wrong_answer_34, R.drawable.wrong_answer_35
+            , R.drawable.wrong_answer_36, R.drawable.wrong_answer_37, R.drawable.wrong_answer_38};
 
     public static int[] image_correct_answer = {R.drawable.correct_answer_1, R.drawable.correct_answer_2
             , R.drawable.correct_answer_3, R.drawable.correct_answer_4, R.drawable.correct_answer_5
             , R.drawable.correct_answer_6, R.drawable.correct_answer_7, R.drawable.correct_answer_8, R.drawable.correct_answer_9
             , R.drawable.correct_answer_10, R.drawable.correct_answer_10, R.drawable.correct_answer_12
             , R.drawable.correct_answer_14, R.drawable.correct_answer_15, R.drawable.correct_answer_16
-            , R.drawable.correct_answer_17, R.drawable.correct_answer_18};
+            , R.drawable.correct_answer_17, R.drawable.correct_answer_18, R.drawable.correct_answer_19
+            , R.drawable.correct_answer_20, R.drawable.correct_answer_21, R.drawable.correct_answer_22
+            , R.drawable.correct_answer_23, R.drawable.correct_answer_24, R.drawable.correct_answer_25
+            , R.drawable.correct_answer_26, R.drawable.correct_answer_27, R.drawable.correct_answer_28
+            , R.drawable.correct_answer_29, R.drawable.correct_answer_30, R.drawable.correct_answer_31
+            , R.drawable.correct_answer_32, R.drawable.correct_answer_33, R.drawable.correct_answer_34
+            , R.drawable.correct_answer_35, R.drawable.correct_answer_36, R.drawable.correct_answer_37
+            , R.drawable.correct_answer_38, R.drawable.correct_answer_39, R.drawable.correct_answer_40
+            , R.drawable.correct_answer_41, R.drawable.correct_answer_42, R.drawable.correct_answer_44
+            , R.drawable.correct_answer_45, R.drawable.correct_answer_46, R.drawable.correct_answer_47
+            , R.drawable.correct_answer_48, R.drawable.correct_answer_49};
+
 
     Random r = new Random();
 
