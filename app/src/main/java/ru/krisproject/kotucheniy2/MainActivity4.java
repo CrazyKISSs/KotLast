@@ -81,7 +81,7 @@ public class MainActivity4 extends AppCompatActivity {
         startLastWindow();
 
         if (index_level_great_new_image) {
-            MainActivity2.image[index_level] = MainActivity2.collect_image_for_levels[index_level];
+            DataBase.image[index_level] = DataBase.collect_image_for_levels[index_level];
             index_level_great_new_image = false;
         }
 

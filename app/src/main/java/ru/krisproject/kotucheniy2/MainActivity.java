@@ -8,12 +8,18 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button_main_start, button5;
+    private Button button_main_start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        for (int i = 0; i < 100; i++) {
+            DataBase.image[i] = 2131231009;
+            int temp = i + 1;
+            DataBase.level_name[i] = "Уровень " + temp;
+        }
 
         button_main_start = findViewById(R.id.button_main_start);
 
