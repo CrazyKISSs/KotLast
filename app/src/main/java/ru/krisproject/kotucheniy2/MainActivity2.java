@@ -12,7 +12,7 @@ import ru.krisproject.kotucheniy2.databinding.ActivityMain2Binding;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    public static int[] image = {R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question,
+    public static int[] image = {2131231009, R.drawable.level_image_question, R.drawable.level_image_question,
             R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question,
             R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question,
             R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
@@ -46,7 +46,7 @@ public class MainActivity2 extends AppCompatActivity {
             , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
             , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question};
 
-    
+
     public static int[] collect_image_for_levels = {R.drawable.level_image_1,
             R.drawable.level_image_2, R.drawable.level_image_3, R.drawable.level_image_22
             , R.drawable.level_image_4, R.drawable.level_image_5, R.drawable.level_image_6, R.drawable.level_image_7

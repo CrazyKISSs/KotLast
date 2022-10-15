@@ -30,6 +30,9 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_text.setText("Ты ответил(а) правильно на 1 вопрос. \nТебе нужно хорошо потренироваться," +
                         "чтобы получить значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_wrong_answer]);
+                Quiz.count_correct_answers = 0;
+                Quiz.count_wrong_answer = 0;
+                Question.question_count = 0;
                 break;
             case 2:
             case 3:
@@ -37,6 +40,9 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопроса. \nПотренируйся" +
                         "ещё немного, чтобы получить значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_wrong_answer]);
+                Quiz.count_correct_answers = 0;
+                Quiz.count_wrong_answer = 0;
+                Question.question_count = 0;
                 break;
             case 5:
             case 6:
@@ -45,6 +51,9 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопросов.\n" +
                         "Ещё немного тренировок, и ты получишь значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
+                Quiz.count_correct_answers = 0;
+                Quiz.count_wrong_answer = 0;
+                Question.question_count = 0;
                 break;
             case 9:
             case 10:
@@ -52,6 +61,9 @@ public class MainActivity4 extends AppCompatActivity {
                         "коллекционный значок! ПОЗДРАВЛЯЮ! Так держать!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
                 index_level_great_new_image = true;
+                Quiz.count_correct_answers = 0;
+                Quiz.count_wrong_answer = 0;
+                Question.question_count = 0;
 
         }
         Quiz.count_correct_answers = 0;
