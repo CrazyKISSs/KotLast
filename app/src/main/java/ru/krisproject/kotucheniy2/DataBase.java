@@ -2,7 +2,40 @@ package ru.krisproject.kotucheniy2;
 
 public class DataBase {
 
-    public static int[] image = new int[100];
+    public static int[] image = {R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question,
+            R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question, R.drawable.level_image_question
+            , R.drawable.level_image_question, R.drawable.level_image_question};
 
     public static int[] collect_image_for_levels = {R.drawable.level_image_1,
             R.drawable.level_image_2, R.drawable.level_image_3, R.drawable.level_image_22

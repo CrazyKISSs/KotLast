@@ -18,7 +18,7 @@ public class MainActivity4 extends AppCompatActivity {
     static Button button_next;
     static Random random = new Random();
     static int index_level;
-    static boolean index_level_great_new_image;
+    static boolean index_level_great_new_image = false;
 
     static void startLastWindow() {
 
@@ -30,9 +30,6 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_text.setText("Ты ответил(а) правильно на 1 вопрос. \nТебе нужно хорошо потренироваться," +
                         "чтобы получить значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_wrong_answer]);
-                Quiz.count_correct_answers = 0;
-                Quiz.count_wrong_answer = 0;
-                Question.question_count = 0;
                 break;
             case 2:
             case 3:
@@ -40,9 +37,6 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопроса. \nПотренируйся" +
                         "ещё немного, чтобы получить значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_wrong_answer]);
-                Quiz.count_correct_answers = 0;
-                Quiz.count_wrong_answer = 0;
-                Question.question_count = 0;
                 break;
             case 5:
             case 6:
@@ -51,9 +45,6 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопросов.\n" +
                         "Ещё немного тренировок, и ты получишь значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
-                Quiz.count_correct_answers = 0;
-                Quiz.count_wrong_answer = 0;
-                Question.question_count = 0;
                 break;
             case 9:
             case 10:
@@ -61,12 +52,11 @@ public class MainActivity4 extends AppCompatActivity {
                         "коллекционный значок! ПОЗДРАВЛЯЮ! Так держать!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
                 index_level_great_new_image = true;
-                Quiz.count_correct_answers = 0;
-                Quiz.count_wrong_answer = 0;
-                Question.question_count = 0;
 
         }
         Quiz.count_correct_answers = 0;
+        Quiz.count_wrong_answer = 0;
+        Question.question_count = 0;
 
     }
 
@@ -74,6 +64,7 @@ public class MainActivity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+
 
         last_window_cat_image = findViewById(R.id.last_window_cat_image);
         last_window_text = findViewById(R.id.last_window_text);
@@ -83,7 +74,9 @@ public class MainActivity4 extends AppCompatActivity {
         if (index_level_great_new_image) {
             DataBase.image[index_level] = DataBase.collect_image_for_levels[index_level];
             index_level_great_new_image = false;
+
         }
+
 
         button_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,4 +88,6 @@ public class MainActivity4 extends AppCompatActivity {
 
 
     }
+
+
 }

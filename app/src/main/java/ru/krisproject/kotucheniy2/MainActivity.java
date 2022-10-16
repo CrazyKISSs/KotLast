@@ -15,12 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        for (int i = 0; i < 100; i++) {
-            DataBase.image[i] = 2131231009;
-            int temp = i + 1;
-            DataBase.level_name[i] = "Уровень " + temp;
-        }
-
         button_main_start = findViewById(R.id.button_main_start);
 
         button_main_start.setOnClickListener(new View.OnClickListener() {
@@ -31,4 +25,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

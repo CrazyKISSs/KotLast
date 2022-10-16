@@ -25,6 +25,14 @@ public class MainActivity2 extends AppCompatActivity {
         binding = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+        for (int i = 0; i < 100; i++) {
+            int temp = i + 1;
+            DataBase.level_name[i] = "Уровень " + temp;
+
+        }
+
+
         back_from_level = findViewById(R.id.back_from_level);
         back_from_level.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,4 +61,5 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
     }
+
 }
