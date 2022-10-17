@@ -10,17 +10,22 @@
 
     <Button
         android:id="@+id/button_main_start"
-        android:layout_width="205dp"
+        style="@style/Widget.Material3.BottomNavigationView"
+        android:layout_width="234dp"
         android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="120sp"
-        android:layout_marginStart="102dp"
+        android:layout_marginStart="70sp"
         android:layout_marginTop="120sp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginEnd="70sp"
         android:background="@drawable/button_main"
-        android:foreground="@drawable/button_main"
+        android:fontFamily="serif"
         android:text="@string/main_button_start"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="38sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="151dp" />
 

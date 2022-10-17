@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,8 @@ import ru.krisproject.kotucheniy2.databinding.ActivityMain2Binding;
 public class MainActivity2 extends AppCompatActivity {
 
     ActivityMain2Binding binding;
+
+    private FrameLayout fragment_choise_level;
 
     public static String choose_level_name;
 
@@ -38,7 +41,7 @@ public class MainActivity2 extends AppCompatActivity {
         }
 
 
-        back_from_level = findViewById(R.id.back_from_level);
+        back_from_level = findViewById(R.id.back_from_level_fragment);
         back_from_level.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
