@@ -189,12 +189,7 @@ public class MainActivity3_test extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        MainActivity.startSound(game_sound);
-    }
-    
+
     @Override
     protected void onStart() {
         super.onStart();

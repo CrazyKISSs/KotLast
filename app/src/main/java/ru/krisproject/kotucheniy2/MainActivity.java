@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static MediaPlayer choise_level_sound;
 
+
     public static void startSound(MediaPlayer sound) {
         sound.start();
         sound.setVolume(0.5f, 0.5f);
@@ -41,11 +42,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        startSound(choise_level_sound);
-    }
 
     @Override
     protected void onPause() {
