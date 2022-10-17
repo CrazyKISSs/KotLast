@@ -1,6 +1,7 @@
 package ru.krisproject.kotucheniy2;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,8 @@ public class MainActivity4 extends AppCompatActivity {
     static Random random = new Random();
     static int index_level;
     static boolean index_level_great_new_image = false;
+
+    MediaPlayer level_end_sound;
 
     static void startLastWindow() {
 
@@ -53,6 +56,7 @@ public class MainActivity4 extends AppCompatActivity {
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
                 index_level_great_new_image = true;
 
+
         }
         Quiz.count_correct_answers = 0;
         Quiz.count_wrong_answer = 0;
@@ -64,6 +68,7 @@ public class MainActivity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+        level_end_sound = MediaPlayer.create(this, R.raw.level_end_sound);
 
 
         last_window_cat_image = findViewById(R.id.last_window_cat_image);
@@ -86,6 +91,19 @@ public class MainActivity4 extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        MainActivity.startSound(level_end_sound);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MainActivity.stopSound(level_end_sound);
 
     }
 

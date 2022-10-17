@@ -1,6 +1,7 @@
 package ru.krisproject.kotucheniy2;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,7 @@ public class MainActivity3_test extends AppCompatActivity {
     static boolean button3_correct;
     static Button button, button2, button3, button4, start_last_window;
     static ImageView imageView6;
+    public static MediaPlayer game_sound, correct_answer_sound, wrong_answer_sound;
 
     static void startQuestion(int n, Quiz quiz) {
         textView5.setText((n + 1) + "/10");
@@ -56,6 +58,9 @@ public class MainActivity3_test extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3_test);
+        game_sound = MediaPlayer.create(this, R.raw.game_sound_2);
+        correct_answer_sound = MediaPlayer.create(this, R.raw.correct_answer_sound);
+        wrong_answer_sound = MediaPlayer.create(this, R.raw.wrong_answer_sound);
 
 
         Quiz quiz = new Quiz(MainActivity2.choose_level_name);
@@ -94,11 +99,13 @@ public class MainActivity3_test extends AppCompatActivity {
                     Quiz.count_correct_answers++;
                     button2.setBackground(getDrawable(R.drawable.button_choise_of_option_image_green));
                     imageView6.setImageResource(Question.image_correct_answer[correct_answer_random]);
+                    correct_answer_sound.start();
 
                 } else {
                     Quiz.count_wrong_answer++;
                     button2.setBackground(getDrawable(R.drawable.button_choise_of_option_image_red));
                     imageView6.setImageResource(Question.image_wrong_answer[wrong_answer_random]);
+                    wrong_answer_sound.start();
                 }
 
                 textView7.setText("Правильных ответов - " + Quiz.count_correct_answers);
@@ -128,11 +135,13 @@ public class MainActivity3_test extends AppCompatActivity {
                     Quiz.count_correct_answers++;
                     button3.setBackground(getDrawable(R.drawable.button_choise_of_option_image_green));
                     imageView6.setImageResource(Question.image_correct_answer[correct_answer_random]);
+                    correct_answer_sound.start();
 
                 } else {
                     Quiz.count_wrong_answer++;
                     button3.setBackground(getDrawable(R.drawable.button_choise_of_option_image_red));
                     imageView6.setImageResource(Question.image_wrong_answer[wrong_answer_random]);
+                    wrong_answer_sound.start();
                 }
 
                 textView7.setText("Правильных ответов - " + Quiz.count_correct_answers);
@@ -178,6 +187,26 @@ public class MainActivity3_test extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MainActivity.startSound(game_sound);
+    }
+    
+    @Override
+    protected void onStart() {
+        super.onStart();
+        MainActivity.startSound(game_sound);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MainActivity.stopSound(game_sound);
+        MainActivity.stopSound(correct_answer_sound);
+        MainActivity.stopSound(wrong_answer_sound);
     }
 
 }
