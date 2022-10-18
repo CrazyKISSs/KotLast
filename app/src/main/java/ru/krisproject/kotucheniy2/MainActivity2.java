@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -20,7 +19,6 @@ public class MainActivity2 extends FragmentActivity {
     Button back_from_level;
     Button back_from_level_fragment;
     MediaPlayer choise_level_sound;
-    ImageView image_choise_level_fragment;
 
 
     @Override
@@ -30,7 +28,10 @@ public class MainActivity2 extends FragmentActivity {
         binding = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         choise_level_sound = MediaPlayer.create(this, R.raw.choise_level_sound_2);
+        back_from_level_fragment = findViewById(R.id.back_from_level_fragment);
 
+        Level_Fragment fragment_level = new Level_Fragment();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
 
         for (int i = 0; i < 100; i++) {
@@ -63,14 +64,17 @@ public class MainActivity2 extends FragmentActivity {
                 choose_level_name = DataBase.level_name[position];
                 MainActivity4.index_level = position;
 
-
-                Level_Fragment fragment_level = new Level_Fragment();
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_level, fragment_level);
                 ft.addToBackStack(null);
-//                image_choise_level_fragment.findViewById(R.id.image_choise_level_fragment);
-//                image_choise_level_fragment.setImageDrawable(getDrawable(DataBase.image[MainActivity4.index_level]));
                 ft.commit();
+//
+//                back_from_level_fragment.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        ft.hide(fragment_level);
+//                        ft.commit();
+//                    }
+//                });
 
             }
         });
