@@ -25,9 +25,9 @@ public class Level_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //       image_choise_level_fragment = getView().findViewById(DataBase.image[DataBase.image[MainActivity4.index_level]]);
+ //      image_choise_level_fragment = getView().findViewById(R.id.image_choise_level_fragment);
 //                view.findViewById(R.id.image_choise_level_fragment);
-        //       image_choise_level_fragment.setImageResource(DataBase.image[DataBase.image[MainActivity4.index_level]]);
+        //       image_choise_level_fragment.setImageResource(DataBase.image[MainActivity4.index_level]);
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_level, container, false);
