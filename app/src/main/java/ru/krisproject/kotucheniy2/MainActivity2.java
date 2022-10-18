@@ -5,24 +5,22 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
+import android.widget.Button;
+import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import ru.krisproject.kotucheniy2.databinding.ActivityMain2Binding;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends FragmentActivity {
 
     ActivityMain2Binding binding;
-
-    private FrameLayout fragment_choise_level;
-
     public static String choose_level_name;
-
-    private ImageButton back_from_level;
-
+    Button back_from_level;
+    Button back_from_level_fragment;
     MediaPlayer choise_level_sound;
+    ImageView image_choise_level_fragment;
 
 
     @Override
@@ -34,6 +32,7 @@ public class MainActivity2 extends AppCompatActivity {
         choise_level_sound = MediaPlayer.create(this, R.raw.choise_level_sound_2);
 
 
+
         for (int i = 0; i < 100; i++) {
             int temp = i + 1;
             DataBase.level_name[i] = "Уровень " + temp;
@@ -41,7 +40,7 @@ public class MainActivity2 extends AppCompatActivity {
         }
 
 
-        back_from_level = findViewById(R.id.back_from_level_fragment);
+        back_from_level = findViewById(R.id.back_from_level);
         back_from_level.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,13 +56,21 @@ public class MainActivity2 extends AppCompatActivity {
         binding.gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Intent intent = new Intent(MainActivity2.this, MainActivity3_test.class);
-                startActivity(intent);
+//
+//                Intent intent = new Intent(MainActivity2.this, MainActivity3_test.class);
+//                startActivity(intent);
 
                 choose_level_name = DataBase.level_name[position];
                 MainActivity4.index_level = position;
 
+
+                Level_Fragment fragment_level = new Level_Fragment();
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_level, fragment_level);
+                ft.addToBackStack(null);
+//                image_choise_level_fragment.findViewById(R.id.image_choise_level_fragment);
+//                image_choise_level_fragment.setImageDrawable(getDrawable(DataBase.image[MainActivity4.index_level]));
+                ft.commit();
 
             }
         });

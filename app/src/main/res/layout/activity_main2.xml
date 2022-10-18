@@ -7,22 +7,27 @@
     android:background="@drawable/main_background"
     tools:context=".MainActivity2">
 
-    <ImageButton
-        android:id="@+id/back_from_level_fragment"
-        android:layout_width="57dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="14dp"
+    <Button
+        android:id="@+id/back_from_level"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="78dp"
+        android:background="@color/transparent"
         android:backgroundTint="@color/transparent"
-        android:contentDescription="выйти"
+        android:contentDescription="@string/exit"
+        android:foreground="@android:drawable/ic_menu_close_clear_cancel"
+        android:text="@string/exit"
+        android:textColor="@color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/gridView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView"

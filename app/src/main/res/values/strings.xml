@@ -4,6 +4,7 @@
     <string name="choice_level">ВЫБЕРИ УРОВЕНЬ:</string>
     <string name="question">Выбери правильный ответ:</string>
     <string name="next">Дальше-></string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exit">выйти</string>
+    <string name="exit2">Выйти</string>
 </resources>
