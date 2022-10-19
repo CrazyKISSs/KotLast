@@ -1,6 +1,7 @@
 package ru.krisproject.kotucheniy2;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +16,14 @@ public class SignActivity extends AppCompatActivity {
 
     Button back_from_sign;
 
+    MediaPlayer choise_level_sound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        choise_level_sound = MediaPlayer.create(this, R.raw.choise_level_sound_2);
+
         if (MainActivity4.count_sign > 0) {
             MainActivity4.sign_name = new String[MainActivity4.count_sign];
             MainActivity4.sign_image = new int[MainActivity4.count_sign];
@@ -50,4 +56,19 @@ public class SignActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (!MainActivity.choise_level_sound.isPlaying())
+            MainActivity.startSound(choise_level_sound);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MainActivity.stopSound(choise_level_sound);
+        MainActivity.stopSound(MainActivity.choise_level_sound);
+    }
+
 }

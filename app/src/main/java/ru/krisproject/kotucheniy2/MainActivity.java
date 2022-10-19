@@ -15,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static void startSound(MediaPlayer sound) {
+        sound.seekTo(0);
         sound.start();
         sound.setVolume(0.5f, 0.5f);
+        sound.setLooping(true);
     }
 
     public static void stopSound(MediaPlayer sound) {
