@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_test"
+    tools:context=".SignActivity">
+
+    <TextView
+        android:id="@+id/your_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:allowUndo="false"
+        android:background="@color/transparent_yellow"
+        android:breakStrategy="high_quality"
+        android:fontFamily="sans-serif-light"
+        android:padding="10sp"
+        android:text="ТВОИ ЗНАЧКИ:"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#201B1B"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back_from_sign"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/transparent"
+        android:backgroundTint="@color/transparent"
+        android:contentDescription="@string/exit"
+        android:foreground="@android:drawable/ic_menu_close_clear_cancel"
+        android:text="@string/exit"
+        android:textColor="@color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/gridView_sign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/your_sign"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:ignore="ImageContrastCheck" />
+
+    <GridView
+        android:id="@+id/gridView_sign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </GridView>
+</androidx.constraintlayout.widget.ConstraintLayout>

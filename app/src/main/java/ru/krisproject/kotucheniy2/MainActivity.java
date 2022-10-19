@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button_main_start;
+    private Button button_main_start, sign_collection;
 
     public static MediaPlayer choise_level_sound;
 
@@ -31,7 +31,22 @@ public class MainActivity extends AppCompatActivity {
         choise_level_sound = MediaPlayer.create(this, R.raw.choise_level_sound_2);
         startSound(choise_level_sound);
 
+        for (int i = 0; i < 100; i++) {
+            int temp = i + 1;
+            DataBase.level_name[i] = "Уровень " + temp;
+
+        }
+
         button_main_start = findViewById(R.id.button_main_start);
+        sign_collection = findViewById(R.id.sign_collection);
+
+        sign_collection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SignActivity.class);
+                startActivity(intent);
+            }
+        });
 
         button_main_start.setOnClickListener(new View.OnClickListener() {
             @Override

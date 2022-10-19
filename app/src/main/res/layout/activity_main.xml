@@ -17,7 +17,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="120sp"
         android:layout_marginStart="70sp"
-        android:layout_marginTop="120sp"
+        android:layout_marginTop="70sp"
         android:layout_marginEnd="70sp"
         android:background="@drawable/button_main"
         android:fontFamily="serif"
@@ -29,12 +29,33 @@
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="151dp" />
 
+    <Button
+        android:id="@+id/sign_collection"
+        style="@style/Widget.Material3.BottomNavigationView"
+        android:layout_width="240dp"
+        android:layout_height="94dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="180sp"
+        android:layout_marginStart="100sp"
+        android:layout_marginTop="180sp"
+        android:layout_marginEnd="100sp"
+        android:background="@drawable/button_main"
+        android:fontFamily="serif"
+        android:text="Коллекция значков"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="151dp" />
+
     <ImageView
         android:id="@+id/main_image_start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/button_main_start"
-        android:layout_marginTop="60sp"
+        android:layout_marginTop="100sp"
         app:srcCompat="@drawable/main_image"
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="367dp" />

@@ -15,6 +15,7 @@ import ru.krisproject.kotucheniy2.databinding.ActivityMain2Binding;
 public class MainActivity2 extends FragmentActivity {
 
     ActivityMain2Binding binding;
+
     public static String choose_level_name;
     Button back_from_level;
  //   Button back_from_level_fragment;
@@ -43,13 +44,6 @@ public class MainActivity2 extends FragmentActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
 
-        for (int i = 0; i < 100; i++) {
-            int temp = i + 1;
-            DataBase.level_name[i] = "Уровень " + temp;
-
-        }
-
-
         back_from_level = findViewById(R.id.back_from_level);
         back_from_level.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,16 +60,16 @@ public class MainActivity2 extends FragmentActivity {
         binding.gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//                Intent intent = new Intent(MainActivity2.this, MainActivity3_test.class);
-//                startActivity(intent);
+
+                Intent intent = new Intent(MainActivity2.this, MainActivity3_test.class);
+                startActivity(intent);
 
                 choose_level_name = DataBase.level_name[position];
                 MainActivity4.index_level = position;
 
-                ft.replace(R.id.fragment_level, fragment_level);
-                ft.addToBackStack(null);
-                ft.commit();
+//                ft.replace(R.id.fragment_level, fragment_level);
+//                ft.addToBackStack(null);
+//                ft.commit();
 
             }
         });

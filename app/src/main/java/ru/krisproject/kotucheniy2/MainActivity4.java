@@ -20,6 +20,9 @@ public class MainActivity4 extends AppCompatActivity {
     static Random random = new Random();
     static int index_level;
     static boolean index_level_great_new_image = false;
+    public static int[] sign_image = {R.drawable.level_image_question};
+    public static String[] sign_name = {"Значков ещё нет"};
+    public static int count_sign = 0;
 
     MediaPlayer level_end_sound;
 
@@ -78,6 +81,8 @@ public class MainActivity4 extends AppCompatActivity {
 
         if (index_level_great_new_image) {
             DataBase.image[index_level] = DataBase.collect_image_for_levels[index_level];
+            DataBase.count_sign_bool[index_level] = true;
+            count_sign++;
             index_level_great_new_image = false;
 
         }
