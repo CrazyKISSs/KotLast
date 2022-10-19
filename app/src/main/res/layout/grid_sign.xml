@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/grid_image_sign"
-        android:layout_width="350sp"
-        android:layout_height="350sp"
+        android:layout_width="330sp"
+        android:layout_height="330sp"
         android:scaleType="centerInside" />
 
     <TextView
