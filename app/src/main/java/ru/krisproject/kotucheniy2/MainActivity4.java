@@ -33,14 +33,14 @@ public class MainActivity4 extends AppCompatActivity {
 
         switch (Quiz.count_correct_answers) {
             case 1:
-                last_window_text.setText("Ты ответил(а) правильно на 1 вопрос. \nТебе нужно хорошо потренироваться," +
+                last_window_text.setText("Ты ответил(а) правильно на 1 вопрос. \nТебе нужно хорошо потренироваться, " +
                         "чтобы получить значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_wrong_answer]);
                 break;
             case 2:
             case 3:
             case 4:
-                last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопроса. \nПотренируйся" +
+                last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопроса. \nПотренируйся " +
                         "ещё немного, чтобы получить значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_wrong_answer]);
                 break;
@@ -49,7 +49,7 @@ public class MainActivity4 extends AppCompatActivity {
             case 7:
             case 8:
                 last_window_text.setText("Ты ответил(а) правильно на " + Quiz.count_correct_answers + " вопросов.\n" +
-                        "Ещё немного тренировок, и ты получишь значок!");
+                        " Ещё немного тренировок, и ты получишь значок!");
                 last_window_cat_image.setImageResource(Question.image_correct_answer[temp_random_image_correct_answer]);
                 break;
             case 9:
@@ -102,7 +102,7 @@ public class MainActivity4 extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        MainActivity.startSound(level_end_sound);
+        level_end_sound.start();
     }
 
     @Override
