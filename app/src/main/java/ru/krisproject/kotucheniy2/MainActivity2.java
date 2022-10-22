@@ -18,7 +18,7 @@ public class MainActivity2 extends FragmentActivity {
 
     public static String choose_level_name;
     Button back_from_level;
- //   Button back_from_level_fragment;
+
     MediaPlayer choise_level_sound;
 
 
@@ -30,15 +30,6 @@ public class MainActivity2 extends FragmentActivity {
         setContentView(binding.getRoot());
         choise_level_sound = MediaPlayer.create(this, R.raw.choise_level_sound_2);
 
-        //       back_from_level_fragment = findViewById(R.id.back_from_level_fragment);
-
-//        back_from_level_fragment.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//          public void onClick(View v) {
-//               ft.hide(fragment_level);
-//               ft.commit();
-//           }
-//     });
 
         Level_Fragment fragment_level = new Level_Fragment();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -66,10 +57,6 @@ public class MainActivity2 extends FragmentActivity {
 
                 choose_level_name = DataBase.level_name[position];
                 MainActivity4.index_level = position;
-
-//                ft.replace(R.id.fragment_level, fragment_level);
-//                ft.addToBackStack(null);
-//                ft.commit();
 
             }
         });
